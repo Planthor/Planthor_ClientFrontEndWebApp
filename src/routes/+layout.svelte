@@ -7,30 +7,25 @@
   import type { LayoutData } from "./$types";
 
   export let data: LayoutData;
+  $: console.log(data.user);
 </script>
 
-{#if $page.url.pathname === "/login"}
-  <div class="background login-wrapper"><slot /></div>
-{/if}
+<div class="app">
+  <Header user={data.user} />
 
-{#if $page.url.pathname !== "/login"}
-  <div class="app">
-    <Header user={data.user} />
+  <main>
+    <slot />
+  </main>
 
-    <main>
-      <slot />
-    </main>
-
-    <footer>
-      <p>
-        visit <a
-          href="https://github.com/Planthor-Team/Planthor_ClientFrontEndWebApp"
-          >Planthor</a
-        > to Discover
-      </p>
-    </footer>
-  </div>
-{/if}
+  <footer>
+    <p>
+      visit <a
+        href="https://github.com/Planthor-Team/Planthor_ClientFrontEndWebApp"
+        >Planthor</a
+      > to Discover
+    </p>
+  </footer>
+</div>
 
 <svelte:head>
   <title>Planthor{$page.data.title ? ` - ${$page.data.title}` : ""}</title>

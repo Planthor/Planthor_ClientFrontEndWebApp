@@ -29,6 +29,7 @@
     "@vitest/ui": "^0.34.6",
     "eslint": "^8.44.0",
     "eslint-plugin-svelte": "^2.35.1",
+    "flowbite": "^2.3.0",
     "jsdom": "^22.1.0",
     "sass": "^1.63.6",
     "svelte": "^4.0.0",
@@ -40,7 +41,8 @@
   },
   "type": "module",
   "dependencies": {
-    "pkce-gen": "^1.1.0",
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "lucide-svelte": "^0.363.0",
+    "pkce-gen": "^1.1.0"
   }
 }

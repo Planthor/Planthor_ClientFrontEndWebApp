@@ -15,7 +15,7 @@ if (process.env.SVELTE_ADAPTER === 'node') {
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
   // Consult https://kit.svelte.dev/docs/integrations#preprocessors
-  // for more information about preprocessors
+  // for more information about preprocessorns
   preprocess: preprocess({
     scss: {
       prependData: '@use "src/styles/functions"; @import "src/styles/colors";',
